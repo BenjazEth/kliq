@@ -2,11 +2,9 @@
 import Home from 'Kliq/Screens/Home';
 import Login from 'Kliq/Screens/Login';
 import Onboarding from 'Kliq/Screens/Onboarding';
-import Contacts from 'Kliq/Screens/Contacts';
 import LogoutButton from 'Kliq/Views/LogoutButton';
-import ContactsButton from 'Kliq/Views/ContactsButton';
 import OnboardingButton from 'Kliq/Views/OnboardingButton';
-import PostButton from 'Kliq/Views/PostButton';
+import MapButton from 'Kliq/Views/MapButton';
 
 class Routes {
   // check method with same name
@@ -27,7 +25,7 @@ class Routes {
       title: "Kliq Test",
       component: Home,
       leftButton: LogoutButton,
-      rightButton: PostButton,
+      rightButton: MapButton,
       hideNavigationBar: false,
       statusBarStyle: "light-content"
     }
