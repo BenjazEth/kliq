@@ -38,7 +38,7 @@ export default class Home extends React.Component {
   componentWillMount() {
     Actions.auth();
   }
-
+  //listen to load user
   componentDidMount() {
     Actions.loadUser.completed.listen(this._onLoadUserCompleted.bind(this));
     Actions.logout.listen(this._onLogout.bind(this));
@@ -72,7 +72,7 @@ export default class Home extends React.Component {
   _retryFetch() {
     // TODO: Initiate another fetch from the server
   }
-
+  //callback functions 
   _onLoadUserCompleted(user) {
     let currentUser = DataStore.getCurrentUser();
 
@@ -82,7 +82,7 @@ export default class Home extends React.Component {
       this.props.replaceRoute(Routes.onboarding(currentUser));
     }
   }
-
+  //onlogout, login will replace 
   _onLogout() {
     this.props.replaceRoute(Routes.login());
   }
